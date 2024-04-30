@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+$font-family-roboto: "Roboto", sans-serif;
+$font-family-quicksand: "Quicksand", sans-serif;
+$white-color: #ffffff;
+$aside-bg-color: #ffffff;
+$aside-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+$main-gradient: linear-gradient(180deg, #ffb354 100%, #ee7a3a 100%);
+$logo-menu-dimensions: 220px;
+$section-dimensions: 220px;
+$section-height: 33px;
+$border-color: #908e8e;
+$font-size: 15px;
+$font-weight: 500;
+$line-height: 19px;
+$color: #725c5c;
+$padding-top-bottom: 7px;
+$padding-left: 20px;
+$width: 200px;
+$hover-bg-color: #fdf1eb;
+$active-bg-color: #fdf1eb;
+$active-border-left: 5px solid #ed7839;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-shadow: none;
+}
+
+aside {
+  position: fixed;
+  width: $logo-menu-dimensions;
+  height: 100vh;
+  background-color: $aside-bg-color;
+  box-shadow: $aside-shadow;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 536px;
+  padding: 0;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: $font-family-roboto;
+  font-style: normal;
+  font-size: 30px;
+  font-weight: 700px;
+  line-height: 35px;
+  color: $white-color;
+
+  h3 {
+    background: $main-gradient;
+    width: $logo-menu-dimensions;
+    height: 68px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+  }
+}
+
+.logo-menu {
+  width: $logo-menu-dimensions;
+  height: $logo-menu-dimensions;
+  margin-top: 540px;
+  margin: 20px 0;
+}
+
+#apresentacao,
+#comites,
+#autores,
+#eixos,
+#trabalhos,
+#contato {
+  width: $section-dimensions;
+  height: $section-height;
+  border-bottom: 1px solid $border-color;
+}
+
+.navbar-nav {
+  a {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    color: $color;
+    font-family: $font-family-quicksand;
+    font-style: normal;
+    padding-top: $padding-top-bottom;
+    padding-bottom: $padding-top-bottom;
+    padding-left: $padding-left;
+    width: $width;
+
+    &:hover {
+      background-color: $hover-bg-color;
+    }
+
+    &.active {
+      background-color: $active-bg-color;
+      border-left: $active-border-left;
+    }
+  }
+}
