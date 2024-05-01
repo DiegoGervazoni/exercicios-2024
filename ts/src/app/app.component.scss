@@ -23,6 +23,9 @@ $active-bg-color: #fdf1eb;
 $active-border-left: 5px solid #ed7839;
 $light-grey: #f5f5f5;
 $notification-red: #f85959;
+$font-size-default: 14px;
+$font-weight-default: 400;
+$line-height-default: 16px;
 
 // Mixins
 @mixin roboto-font {
@@ -35,6 +38,12 @@ $notification-red: #f85959;
   font-family: $font-family-quicksand;
   font-style: normal;
   font-weight: 400;
+}
+
+@mixin default-font-styles {
+  font-size: $font-size-default;
+  font-weight: $font-weight-default;
+  line-height: $line-height-default;
 }
 
 // Estilos globais
@@ -153,32 +162,29 @@ header {
 }
 
 .descricao-simposio {
-  top: 2px;
+  @include default-font-styles;
+  position: relative;
   width: 643px;
   height: 26px;
   padding-top: 5px;
   margin-left: 36px;
-  font-size: 14px;
-  line-height: 16px;
 }
 
 .titulo-simposio {
+  @include default-font-styles;
   max-width: 1200px;
   height: 26px;
-  top: 2px;
+  position: relative;
   margin-left: 36px;
   bottom: 12px;
-  font-size: 22px;
-  line-height: 26px;
 }
 
 .issn-simposio {
+  @include default-font-styles;
+  position: relative;
   width: 105px;
   height: 16px;
-  top: 2px;
   margin-left: 36px;
-  font-size: 14px;
-  line-height: 16px;
 }
 
 #controle-usuario {
@@ -195,16 +201,16 @@ header {
   padding: 3px;
   margin-top: 17px;
   text-align: center;
-}
 
-#selecao-linguagem img {
-  margin-bottom: 4px;
-}
+  img {
+    margin-bottom: 4px;
+  }
 
-#idioma {
-  border: none;
-  background-color: #fdf1eb;
-  font-size: 14px;
+  #idioma {
+    border: none;
+    background-color: #fdf1eb;
+    font-size: 14px;
+  }
 }
 
 #login {
@@ -276,7 +282,153 @@ header {
   margin-left: 20px;
   bottom: 34px;
   letter-spacing: -0.02em;
-  color: #ffffff;
+  color: $white-color;
   background: $notification-red;
   border-radius: 10px;
+}
+
+.conteudo-pagina {
+  display: block;
+  padding-right: 45px;
+  padding-left: 45px;
+}
+
+#conteudo-titulo {
+  display: inline-flex;
+  width: 100%;
+  padding-top: 25px;
+}
+
+.texto-analise {
+  width: 80%;
+  height: 54px;
+  width: 90%;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 25px;
+  margin-left: 44px;
+  letter-spacing: 0.05em;
+  color: #ed7839;
+}
+
+#interacao {
+  width: 50%;
+  text-align: right;
+}
+
+#botoes-interacao img{
+  padding-left: 3px;
+  height: 2.1rem;
+  cursor: pointer;
+}
+
+#texto-trabalho {
+  margin-top: 8px;
+  height: 25px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 25px;
+  text-align: right;
+  letter-spacing: 0.05em;
+  word-spacing: 2px;
+  color: #ed7839;
+}
+
+#video-conteudo {
+  position: relative;
+}
+
+#video-container {
+  position: relative;
+  width: 810px;
+  height: 439px;
+  margin-left: 44px;
+  top: 20px;
+}
+
+.video-detalhe {
+  position: absolute;
+  width: 300px;
+  height: 440px;
+  right: 50px;
+  top: 180px;
+  border: 1px solid #ececec;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.titulo-detalhe {
+  background: #fdf1eb;
+  border: 1px solid #ececec;
+  box-sizing: border-box;
+  border-radius: 3px 3px 0px 0px;
+  height: 45px;
+  width: 300px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 25px;
+  align-items: center;
+  color: #4e4e4e;
+  padding-top: 12px;
+  padding-left: 20px;
+}
+
+.conteudo-video {
+  display: flex;
+  position: relative;
+}
+
+.video-texto {
+  width: 255px;
+  height: 330px;
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 135%;
+  letter-spacing: 0.02em;
+  color: #5c5c5c;
+  margin-top: 15px;
+  margin-left: 22px;
+}
+
+.video-texto span {
+  font-weight: 500;
+  font-size: 12px;
+  color: #827c7c;
+}
+
+.detalhe-rolagem {
+  position: relative;
+  width: 4px;
+  height: 330px;
+  left: 10px;
+  top: 30px;
+}
+
+.rolagem-cima {
+  position: absolute;
+  width: 4px;
+  height: 180px;
+  left: 0px;
+  top: 0px;
+  background: #bfbfbf;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.rolagem-baixo {
+  position: absolute;
+  width: 4px;
+  height: 306px;
+  left: 0px;
+  top: 0px;
+  background: #e7e7e7;
+  border-radius: 5px;
 }
