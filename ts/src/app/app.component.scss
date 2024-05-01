@@ -23,9 +23,6 @@ $active-bg-color: #fdf1eb;
 $active-border-left: 5px solid #ed7839;
 $light-grey: #f5f5f5;
 $notification-red: #f85959;
-$font-size-default: 14px;
-$font-weight-default: 400;
-$line-height-default: 16px;
 
 // Mixins
 @mixin roboto-font {
@@ -38,12 +35,6 @@ $line-height-default: 16px;
   font-family: $font-family-quicksand;
   font-style: normal;
   font-weight: 400;
-}
-
-@mixin default-font-styles {
-  font-size: $font-size-default;
-  font-weight: $font-weight-default;
-  line-height: $line-height-default;
 }
 
 // Estilos globais
@@ -162,29 +153,32 @@ header {
 }
 
 .descricao-simposio {
-  @include default-font-styles;
-  position: relative;
+  top: 2px;
   width: 643px;
   height: 26px;
   padding-top: 5px;
   margin-left: 36px;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .titulo-simposio {
-  @include default-font-styles;
   max-width: 1200px;
   height: 26px;
-  position: relative;
+  top: 2px;
   margin-left: 36px;
   bottom: 12px;
+  font-size: 22px;
+  line-height: 26px;
 }
 
 .issn-simposio {
-  @include default-font-styles;
-  position: relative;
   width: 105px;
   height: 16px;
+  top: 2px;
   margin-left: 36px;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 #controle-usuario {
