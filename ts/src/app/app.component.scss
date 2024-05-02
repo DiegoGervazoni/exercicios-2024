@@ -312,7 +312,7 @@ header {
   text-align: right;
 }
 
-#botoes-interacao img{
+#botoes-interacao img {
   padding-left: 3px;
   height: 2.1rem;
   cursor: pointer;
@@ -425,4 +425,60 @@ header {
   top: 0px;
   background: #e7e7e7;
   border-radius: 5px;
+}
+
+.caixa-informativa {
+  border-radius: 3px;
+  border: 1px solid #ececec;
+  margin-top: 40px;
+  width: 1158px;
+  margin-left: 90px;
+}
+
+.header-informativo {
+  background-color: #fdf1eb;
+  font-family: "Roboto";
+  font-size: 20px;
+  width: 1158px;
+  font-weight: 500;
+  line-height: 25px;
+  color: #4e4e4e;
+  padding: 10px 15px;
+  border-bottom: 1px solid #ececec;
+
+}
+
+.conteudo-informativo {
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+
+  font-family: "Quicksand";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
+  letter-spacing: 0.02em;
+  color: #5c5c5c;
+}
+
+.informativo-txt__show-paragrafo, .informativo-txt__unshow-paragrafo {
+  font-family: "Quicksand";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22.75px;
+  letter-spacing: 0.02em;
+  color: #5c5c5c;
+  margin: 0;
+}
+
+.btn-show-more {
+  font-weight: 700;
+  color: #ED7839;
+  text-decoration: none;
+  border: none;
+  background-color: transparent; // Adicione esta linha
+}
+
+.btn-show-more:hover {
+  cursor: pointer;
 }
