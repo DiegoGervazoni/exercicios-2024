@@ -146,7 +146,9 @@
               et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in
               sapien scelerisque, ac gravida eros vestibulum. Etiam aliquam
               dictum nisl, vel aliquet enim accumsan sit ametl accumsant...
-              <button (click)="showMore()" class="btn-show-more">ver mais</button>
+              <button (click)="showMore()" class="btn-show-more">
+                ver mais
+              </button>
             </p>
             <p class="informativo-txt__unshow-paragrafo" *ngIf="!show">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
@@ -226,16 +228,98 @@
                 cultural é a curiosidade? Deixe seus questionamentos ou
                 sugestões para o autor!
               </p>
-              <button class="btn-create-topic" id="btn-create-topic">
-                <i class="fa-solid fa-plus" style="color: #ffffff"></i> criar tópico
+              <button (click)="createTopic()" class="btn-create-topic">
+                + criar tópico
               </button>
-            </section> 
+
+              <div *ngIf="showForm" id="header-informativo">
+                <p class="duvida">
+                  Tem uma dúvida ou sugestão? Compartilhe seu feedback com os
+                  autores
+                </p>
+                <h4 class="adicionar-cabecalho">Assunto</h4>
+                <input
+                  type="text"
+                  [(ngModel)]="topicTitle"
+                  class="inputText"
+                  placeholder="Defina um tópico sucinto para notificar os autores..."
+                />
+                <h4 class="adicionar-cabecalho">Conteúdo</h4>
+                <textarea
+                  [(ngModel)]="topicContent"
+                  class="textArea"
+                  rows="5"
+                  cols="50"
+                ></textarea>
+                <br />
+                <button (click)="sendTopic()" class="btn-create-topic" >
+                  Enviar
+                </button>
+                <div *ngIf="topicSent" id="discussion">
+                  <h4 class="adicionar-cabecalho">
+                    Seu tópico foi enviado com sucesso! :D
+                  </h4>
+                  <p class="duvida">
+                    Agradecemos por sua contribuição, uma notificação será
+                    enviada ao seu email assim que seu tópico for respondido!
+                  </p>
+                  <p>{{ topicMessage }}</p>
+                  <a class="discoverLink">Descubra outros trabalhos!</a>
+                  <br />
+                  <button (click)="createTopic()" class="btn-create-topic">
+                    novo tópico
+                  </button>
+                  <br />
+                  <div class="newTopic">
+                    <p class="waiting">Aguardando feedback dos autores</p>
+                    <a class="discoverLink">Editar tópico</a>
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="topico">
+            <h3 class="assunto-topico">Assunto da pergunta aparece aqui</h3>
+            <br />
+            <p class="usuario-topico">Carlos Henrique Santos</p>
+            <br />
+            <p class="pergunta">
+              Comecinho da pergunta aparece aqui resente relato inscreve-se no
+              campo da análise da dimensão e impacto de processo formativo
+              situado impacto de processo formativo processo...
+            </p>
+            <img src="../assets/mais informações.png" alt="Mais info" />
+            <img class="coracao" src="../assets/favoritar.png" alt="Coracao" />
+            <p class="interacoes">
+              <span>1 like</span>
+              <span>1 resposta</span>
+            </p>
+          </div>
+          <div class="topico">
+            <h3 class="assunto-topico">Assunto da pergunta aparece aqui</h3>
+            <br />
+            <p class="usuario-topico">Carlos Henrique Santos</p>
+            <br />
+            <p class="pergunta">
+              Comecinho da pergunta aparece aqui resente relato inscreve-se no
+              campo da análise da dimensão e impacto de processo formativo
+              situado impacto de processo formativo processo...
+            </p>
+            <img src="../assets/mais informações.png" alt="Mais info" />
+            <img class="coracao" src="../assets/favoritar.png" alt="Coracao" />
+            <p class="interacoes">
+              <span>1 like</span>
+              <span>1 resposta</span>
+            </p>
           </div>
         </section>
       </main>
 
       <!-- footer -->
-      <footer></footer>
+      <footer>
+        <img class="galoa" src="../assets/imagem - footer.png" alt="Galoa" />
+      </footer>
     </div>
 
     <!-- scripts -->

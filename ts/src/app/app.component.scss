@@ -482,3 +482,172 @@ header {
 .btn-show-more:hover {
   cursor: pointer;
 }
+
+.discussao-compart {
+  text-align: center;
+}
+
+.discussao-compart__titulo {
+  color: #ed7839;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.discussao-compart__paragrafo {
+  color: #595959;
+  text-align: center;
+  font-family: Quicksand;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 137.5%;
+}
+
+.btn-create-topic {
+  color: #fff;
+  text-align: center;
+  font-family: Quicksand;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  width: 133px;
+  height: 32px;
+  border-radius: 5px;
+  border-color: transparent;
+  background: linear-gradient(180deg, #ffb354 0%, #ee7a3a 100%);
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.24));
+}
+
+.duvida {
+  color: #5c5c5c;
+  text-align: center;
+  font-family: Quicksand;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.adicionar-cabecalho {
+  color: #ed7839;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.inputText, .textArea {
+  color: #4d4d4d;
+  font-family: Quicksand;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 60%;
+  resize: none;
+}
+
+.discoverLink {
+  color: #f48f44;
+  text-align: center;
+  font-family: Quicksand;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 137.5%;
+  text-decoration-line: underline;
+}
+
+.newTopic {
+  padding: 1%;
+  border-radius: 3px;
+  border: 1px solid #ececec;
+  line-height: normal;
+  backdrop-filter: blur(10000px);
+}
+
+.waiting {
+  color: #707070;
+  font-family: Quicksand;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.topico {
+  padding: 1%;
+  border-radius: 3px;
+  border: 1px solid #ececec;
+  line-height: normal;
+}
+
+.assunto-topico {
+  color: #ed7839;
+  font-family: Quicksand;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 0%;
+}
+
+.usuario-topico {
+  color: #5c5c5c;
+  font-family: Quicksand;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+.pergunta {
+  color: #4d4d4d;
+  font-family: Quicksand;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 0%;
+}
+
+.like {
+  border-radius: 10px;
+  border-color: transparent;
+  background: linear-gradient(180deg, #ffb354 0%, #ee7a3a 100%);
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.24));
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  padding-top: 0.1%;
+  padding-bottom: 0.1%;
+}
+
+.interacoes {
+  color: #757575;
+  font-family: Segoe UI;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 350;
+  display: inline-block;
+}
+
+.interacoes span:not(:first-child) {
+  margin-left: 15px;
+}
+
+.coracao {
+  padding: 15px;
+}
+
+footer {
+  position: relative;
+  left: 12%;
+  bottom: 0%;
+}
+.galoa {
+  max-width: 53%;
+}
