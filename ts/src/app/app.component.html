@@ -150,7 +150,7 @@
                 ver mais
               </button>
             </p>
-            <p class="informativo-txt__unshow-paragrafo" *ngIf="!show">
+            <p class="informativo-txt__unshow-paragrafo" *ngIf="showRestText">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
               vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus
               felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce
@@ -195,6 +195,7 @@
               Aliquam at malesuada arcu. Aliquam erat volutpat. Donec varius
               ipsum purus, ut vehicula purus placerat vitae. Lorem ipsum dolor
               sit amet, consectetur adipiscing elit.
+              <button (click)="showMore()" class="btn-none">ver menos</button>
             </p>
           </div>
         </section>
@@ -266,7 +267,7 @@
                   <p>{{ topicMessage }}</p>
                   <a class="discoverLink">Descubra outros trabalhos!</a>
                   <br />
-                  <button (click)="createTopic()" class="btn-create-topic">
+                  <button (click)="createNewTopic()" class="btn-create-topic">
                     novo tópico
                   </button>
                   <br />
