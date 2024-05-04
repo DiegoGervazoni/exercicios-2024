@@ -238,24 +238,28 @@
                   Tem uma dúvida ou sugestão? Compartilhe seu feedback com os
                   autores
                 </p>
-                <h4 class="adicionar-cabecalho">Assunto</h4>
-                <input
-                  type="text"
-                  [(ngModel)]="topicTitle"
-                  class="inputText"
-                  placeholder="Defina um tópico sucinto para notificar os autores..."
-                />
-                <h4 class="adicionar-cabecalho">Conteúdo</h4>
-                <textarea
-                  [(ngModel)]="topicContent"
-                  class="textArea"
-                  rows="5"
-                  cols="50"
-                ></textarea>
-                <br />
-                <button (click)="sendTopic()" class="btn-create-topic" >
-                  Enviar
-                </button>
+
+                <form action="">
+                  <h4 class="adicionar-cabecalho">Assunto</h4>
+                  <input
+                    type="text"
+                    [(ngModel)]="topicTitle"
+                    class="inputText"
+                    placeholder="Defina um tópico sucinto para notificar os autores..."
+                  />
+                  <h4 class="adicionar-cabecalho">Conteúdo</h4>
+                  <textarea
+                    [(ngModel)]="topicContent"
+                    class="textArea"
+                    rows="5"
+                    cols="50"
+                  ></textarea>
+                  <br />
+                  <button (click)="sendTopic()" class="btn-create-topic">
+                    Enviar
+                  </button>
+                </form>
+                
                 <div *ngIf="topicSent" id="discussion">
                   <h4 class="adicionar-cabecalho">
                     Seu tópico foi enviado com sucesso! :D
