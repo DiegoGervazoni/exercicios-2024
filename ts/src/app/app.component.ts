@@ -22,9 +22,11 @@ export class AppComponent {
   btnCreateTopic: boolean = true;
   btnResetState:  boolean = false; 
   containerComments: boolean = false;
+  isSubmitted = false;
 
   toggleState(): void {
     this.btnSubmitForm = !this.btnSubmitForm;
+    this.isSubmitted = true;
 }
 
   submitComments(): void {

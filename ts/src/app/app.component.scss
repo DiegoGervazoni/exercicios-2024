@@ -563,6 +563,21 @@ header {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+.adicionar-cabecalho-topico {
+  color: $cor-primaria;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 4px;
 }
 
 .inputText, .textArea {
@@ -684,7 +699,7 @@ header {
   padding: 15px;
 }
 
-.btnEnviar {
+.button {
   width: 100%;
   height: 31px;
   border-radius: 4px;

@@ -1,395 +1,400 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Slaca 13</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <aside>
-      <div class="menu">
-        <div class="main">
-          <h3>Slaca 2019</h3>
-        </div>
-        <img
-          class="logo-menu"
-          src="../assets/slaca-logo.jpg"
-          alt="Logo Slaca"
-        />
-        <nav class="navbar">
-          <div class="navbar-nav">
-            <a href="#" id="apresentacao">Apresentação</a>
-            <a href="#" id="comites">Comitês</a>
-            <a href="#" id="autores">Autores</a>
-            <a href="#" id="eixos">Eixos temáticos</a>
-            <a href="#" id="trabalhos">Trabalhos</a
-            ><a href="#" id="contato">Contato</a>
-          </div>
-        </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slaca 13</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+</head>
+<body>
+  <aside>
+    <div class="menu">
+      <div class="main">
+        <h3>Slaca 2019</h3>
       </div>
-    </aside>
-
-    <div class="conteudo">
-      <!-- header da pagina -->
-      <header>
-        <section id="info-simposio">
-          <p class="descricao-simposio">
-            Anais do Simpósio Latino Americano de Ciências de Alimentos
-          </p>
-          <h1 class="titulo-simposio">
-            Anais do 13º Simpósio Latino Americano de Ciência de Alimentos
-          </h1>
-          <p class="issn-simposio">ISSN: 1234-5678</p>
-        </section>
-        <nav id="controle-usuario">
-          <div id="selecao-linguagem">
-            <img src="../assets/idioma.svg" alt="Ícone de seleção de idioma" />
-            <select name="idioma" id="idioma">
-              <option value="pt-br">PT, BR</option>
-              <option value="ingles">ING</option>
-            </select>
-          </div>
-          <section id="login">
-            <div class="login-pessoal">
-              <div id="bem-vindo">
-                <p>Bem vindo!</p>
-              </div>
-              <div id="email">
-                <p>alguem12@galoascience.com</p>
-              </div>
-              <div class="perfil-notificacao-container">
-                <div id="imagem-notificao">
-                  <img src="../assets/foto-perfil.png" alt="Foto de perfil" />
-                  <p id="numero-id">2</p>
-                </div>
-              </div>
-            </div>
-          </section>
-        </nav>
-      </header>
-
-      <main>
-        <!-- div para o conteudo -->
-        <article class="conteudo-pagina">
-          <section id="conteudo-titulo">
-            <h2 class="texto-analise">
-              Análise sensorial de preparações funcionais desenvolvidas para
-              escolares entre 09 e 15 anos, do município de Campinas/SP
-            </h2>
-            <div id="interacao">
-              <div id="botoes-interacao">
-                <img src="../assets/download button.png" alt="Download" />
-                <img src="../assets/favorite button.png" alt="Favorito" />
-                <img src="../assets/doi button.png" alt="Doi" />
-              </div>
-              <p id="texto-trabalho">COMO CITAR ESSE TRABALHO</p>
-            </div>
-          </section>
-
-          <!-- Video -->
-          <section id="video-conteudo">
-            <img
-              id="video-container"
-              src="../assets/vídeo apresentação.png"
-              alt="Video"
-            />
-          </section>
-          <aside class="video-detalhe">
-            <h3 class="titulo-detalhe">Detalhes</h3>
-            <div class="conteudo-video">
-              <p class="video-texto">
-                Tipo de Apresentação: <strong>Pôster</strong><br />
-                Eixo temático: <strong>Alimentação e saúde (AS)</strong> <br />
-                Palavras-chaves:
-                <strong>Alimentos funcionais, alimentação escolar.</strong>
-                <br /><br />
-                <strong>Autores:</strong> <br />
-                Galileo Galilei¹<br />
-                Berta Lange de Morretes²<br />
-                Isaac Newton³<br />
-                Cesar Lattes¹<br />
-                Stephen Hawking⁴<br /><br />
-                <span>
-                  ¹Universidade Estadual de Campinas<br />
-                  ²Universidade de São Paulo<br />
-                  ³Instituto Nacional de Pesquisas Espaciais<br />
-                  ⁴Universidade Federal do Rio de Janeiro
-                </span>
-              </p>
-              <div class="detalhe-rolagem">
-                <div class="rolagem-cima"></div>
-                <div class="rolagem-baixo"></div>
-              </div>
-            </div>
-          </aside>
-        </article>
-
-        <section class="caixa-informativa">
-          <header class="header-informativo">Resumo</header>
-          <div class="conteudo-informativo">
-            <p class="informativo-txt__show-paragrafo" *ngIf="show">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus
-              felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce
-              auctor eros sed magna ultricies gravida. Etiam aliquam dictum
-              nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi
-              tellus, ut viverra lorem vestibulum ut. Phasellus condimentum orci
-              id leo condimentum lobortis et non lorem. Sed id nisl metus.
-              Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros
-              vestibulum Phasellus condimentum orci id leo condimentum lobortis
-              et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in
-              sapien scelerisque, ac gravida eros vestibulum. Etiam aliquam
-              dictum nisl, vel aliquet enim accumsan sit ametl accumsant...
-              <button (click)="showMore()" class="btn-show-more">
-                ver mais
-              </button>
-            </p>
-            <p class="informativo-txt__unshow-paragrafo" *ngIf="showRestText">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus
-              felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce
-              auctor eros sed magna ultricies gravida. Etiam aliquam dictum
-              nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi
-              tellus, ut viverra lorem vestibulum ut. Phasellus condimentum orci
-              id leo condimentum lobortis et non lorem. Sed id nisl metus.
-              Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros
-              vestibulum.
-              <br />
-              <br />
-              Fusce vitae luctus dui. Donec id euismod mauris, in volutpat urna.
-              Proin dapibus consequat feugiat. Proin dictum justo arcu, quis
-              vestibulum augue lacinia quis. Sed dignissim dui nulla, ut
-              faucibus mauris sodales id. Aliquam erat volutpat. Maecenas dolor
-              enim, tincidunt id elit non, suscipit interdum turpis. Etiam
-              finibus urna libero, eget interdum eros volutpat ullamcorper.
-              Pellentesque et pretium lorem. Aenean interdum quis diam ac
-              porttitor. Cras nec ipsum pulvinar, pharetra libero non, ornare
-              enim. Etiam in laoreet odio.
-              <br />
-              <br />
-              Nam eget tristique elit, at fermentum tellus. Mauris scelerisque
-              ligula id eleifend feugiat. Donec eleifend vehicula sem nec
-              dapibus. Integer scelerisque neque dui, in lacinia erat molestie
-              eu. Phasellus maximus dui eget lacus porta tempor. Ut ex nibh,
-              dignissim quis purus semper, efficitur facilisis turpis. Praesent
-              blandit elementum ultricies. Aliquam sit amet enim sit amet nulla
-              pulvinar lobortis consectetur non odio. Phasellus at lacus
-              hendrerit, vulputate nisi sit amet, viverra mauris. Etiam eu
-              scelerisque orci. Quisque sagittis, mi vitae pharetra iaculis,
-              orci elit eleifend massa, eu posuere mauris odio id odio. Morbi eu
-              libero luctus, consectetur lorem vel, interdum sapien. Aenean in
-              porta arcu. Maecenas eu maximus massa.
-              <br />
-              <br />
-              Praesent velit dolor, dignissim sed quam ac, efficitur porta
-              justo. Pellentesque porta pharetra felis ut hendrerit. Nulla
-              facilisi. Aliquam erat volutpat. Nunc sit amet faucibus quam.
-              Maecenas dapibus luctus dolor at viverra. Duis nec fringilla
-              libero. Duis risus nibh, viverra ac orci nec, iaculis dictum sem.
-              Aliquam at malesuada arcu. Aliquam erat volutpat. Donec varius
-              ipsum purus, ut vehicula purus placerat vitae. Lorem ipsum dolor
-              sit amet, consectetur adipiscing elit.
-              <button (click)="showMore()" class="btn-none">ver menos</button>
-            </p>
-          </div>
-        </section>
-
-        <section class="caixa-informativa mt-[30px]">
-          <header class="header-informativo">Discussões</header>
-          <div class="conteudo-informativo">
-            <section class="discussao-compart" *ngIf="btnCreateTopic">
-              <h2 class="discussao-compart__titulo" *ngIf="!btnSubmitForm">
-                Compartilhe suas ideias ou dúvidas com os autores!
-              </h2>
-              <div class="discussao-compart__imagens" *ngIf="!btnSubmitForm">
-                <img
-                  class="discussao-compart__imagens-mao"
-                  src="../assets/mao.png"
-                  alt="Mao"
-                />
-                <img
-                  class="discussao-compart__imagens-qa"
-                  src="../assets/qa.png"
-                  alt="Qa"
-                />
-                <img
-                  class="discussao-compart__imagens-ideia"
-                  src="../assets/idea.png"
-                  alt="Ideia"
-                />
-              </div>
-              <p class="discussao-compart__paragrafo" *ngIf="!btnSubmitForm">
-                Sabia que o maior estímulo no desenvolvimento científico e
-                cultural é a <br />
-                curiosidade? Deixe seus questionamentos ou sugestões para o
-                autor!
-              </p>
-              <button  class="btn-create-topic" (click)="toggleState()" *ngIf="!btnSubmitForm">
-                + criar tópico
-              </button>
-
-              <div *ngIf="btnSubmitForm" id="header-informativo">
-                <p class="duvida">
-                  Tem uma dúvida ou sugestão? Compartilhe seu feedback com os
-                  autores
-                </p>
-
-                <form>
-                  <h4 class="adicionar-cabecalho">Assunto</h4>
-                  <input
-                    type="text"
-                    class="subject"
-                    name="subject"
-                    placeholder="Defina um tópico sucinto para notificar os autores..."
-                  />
-                  <h4 class="adicionar-cabecalho">Conteúdo</h4>
-                  <textarea class="textArea" rows="5" cols="50"></textarea>
-                  <br />
-                  <div>
-                    <button class="button" (click)="submitComments()" type="submit">
-                      Enviar
-                    </button>
-                  </div>
-                </form>
-              </div>
-              
-              <div *ngIf="btnResetState" id="discussion">
-                <h4 class="adicionar-cabecalho">
-                  Seu tópico foi enviado com sucesso! :D
-                </h4>
-                <p class="duvida">
-                  Agradecemos por sua contribuição, uma notificação será enviada
-                  ao seu email assim que seu tópico for respondido!
-                </p>
-                <a href="#" class="discoverLink">Descubra outros trabalhos!</a>
-                <br />
-                <button (click)="toggleStateReset()" class="btn-create-topic" >
-                  criar novo tópico
-                </button>
-              </div>
-              <div class="feedback-message" *ngIf="btnResetState">
-                <div class="card-topics">
-                  <h3 class="assunto-topico">Assunto da pergunta aparece aqui</h3>
-                  <h4 class="usuario-topico">Carlos Henrique Santos</h4>
-                  <p class="pergunta">
-                    Comecinho da pergunta aparece aqui resente relato
-                    inscreve-se no campo da análise da dimensão e impacto de
-                    processo formativo situado impacto de processo formativo
-                    processo...
-                  </p>
-                  <div class="shadow-card-feedback"></div>
-                  <img src="../assets/esperar.png" alt="Feedback" />
-                  <h3 class="h3-shadow">Aguardando feedback dos autores</h3>
-                  <a class="discoverLink">Editar tópico</a>
-                </div>
-              </div>
-            </section>
-          </div>
-
-          <div class="answered-topic-none">
-            <h3 class="assunto-topico">Assunto da pergunta aparece aqui</h3>
-            <br />
-            <p class="usuario-topico">Carlos Henrique Santos</p>
-            <br />
-            <p class="pergunta">
-              Comecinho da pergunta aparece aqui resente relato inscreve-se no
-              campo da análise da dimensão e impacto de processo formativo
-              situado impacto de processo formativo processo...
-            </p>
-            <img src="../assets/mais informações.png" alt="Mais info" />
-            <img class="coracao" src="../assets/favoritar.png" alt="Coracao" />
-            <p class="ops-topic-subject">
-              <span>1 like</span>
-              <span>1 resposta</span>
-            </p>
-          </div>
-          <div class="answered-topic">
-            <h3 class="assunto-topico">Assunto da pergunta aparece aqui</h3>
-            <br />
-            <p class="usuario-topico">Carlos Henrique Santos</p>
-            <br />
-            <p class="pergunta">
-              Comecinho da pergunta aparece aqui resente relato inscreve-se no
-              campo da análise da dimensão e impacto de processo formativo
-              situado impacto de processo formativo processo...
-            </p>
-            <img src="../assets/mais informações.png" alt="Mais info" />
-            <img class="coracao" src="../assets/favoritar.png" alt="Coracao" />
-            <p class="subject">
-              <span>4 like</span>
-              <button class="ops-topic-subject" (click)="toggleContainerComments()">4 resposta</button>
-            </p>
-          </div>
-          <div class="comments-container" *ngIf="containerComments">
-            <div class="author-1" >
-              <h4>Adriano da Silva</h4>
-              <p>
-                Resposta do autor é aqui. Relato inscreve-se no campo da análise
-                da dimensão e impacto de processo formativo situado impacto de
-                processo formativo processo resente relato inscreve-se no campo da
-                análise da dimensão e impacto de processo formativo situado
-                impacto de processo formativo processo.
-              </p>
-            </div>
-            <div class="author-2">
-              <h4>Carlos Henrique Santos</h4>
-              <p>
-                Consegui entender melhor agora! Parece que a variação da análise
-                da dimensão e impacto de processo formativo situado impacto de
-                processo formativo.
-              </p>
-            </div>
-            <div class="author-1">
-              <h4>Camila Ferreira Andrade</h4>
-              <p>
-                Também ínteressante lembrar que o relato inscreve-se no campo da
-                análise da dimensão e impacto de processo formativo situado
-                impacto de<br /><br />processo formativo processo resente relato
-                inscreve-se no campo da análise da dimensão e impacto de processo
-                formativo situado impacto de processo formativo processo.
-              </p>
-            </div>
-            <div class="author-1">
-              <h4>Ana Carolina</h4>
-              <p>
-                Resposta do autor é aqui. Relato inscreve-se no campo da análise
-                da dimensão e impacto de processo formativo situado impacto de
-                processo formativo processo resente relato inscreve-se no campo da
-                análise da dimensão e impacto de processo formativo situado
-                impacto de processo formativo processo.
-              </p>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <!-- footer -->
-      <footer>
-        <img class="galoa" src="../assets/imagem - footer.png" alt="Galoa" />
-      </footer>
+      <img class="logo-menu" src="../assets/slaca-logo.jpg" alt="Logo Slaca" />
+      <nav class="navbar">
+        <div class="navbar-nav">
+          <a href="#" id="apresentacao">Apresentação</a>
+          <a href="#" id="comites">Comitês</a>
+          <a href="#" id="autores">Autores</a>
+          <a href="#" id="eixos">Eixos temáticos</a>
+          <a href="#" id="trabalhos">Trabalhos</a
+          ><a href="#" id="contato">Contato</a>
+        </div>
+      </nav>
     </div>
+  </aside>
 
-    <!-- scripts -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <div class="conteudo">
+    <!-- header da pagina -->
+    <header>
+      <section id="info-simposio">
+        <p class="descricao-simposio">
+          Anais do Simpósio Latino Americano de Ciências de Alimentos
+        </p>
+        <h1 class="titulo-simposio">
+          Anais do 13º Simpósio Latino Americano de Ciência de Alimentos
+        </h1>
+        <p class="issn-simposio">ISSN: 1234-5678</p>
+      </section>
+      <nav id="controle-usuario">
+        <div id="selecao-linguagem">
+          <img src="../assets/idioma.svg" alt="Ícone de seleção de idioma" />
+          <select name="idioma" id="idioma">
+            <option value="pt-br">PT, BR</option>
+            <option value="ingles">ING</option>
+          </select>
+        </div>
+        <section id="login">
+          <div class="login-pessoal">
+            <div id="bem-vindo">
+              <p>Bem vindo!</p>
+            </div>
+            <div id="email">
+              <p>alguem12@galoascience.com</p>
+            </div>
+            <div class="perfil-notificacao-container">
+              <div id="imagem-notificao">
+                <img src="../assets/foto-perfil.png" alt="Foto de perfil" />
+                <p id="numero-id">2</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </nav>
+    </header>
+
+    <main>
+      <!-- div para o conteudo -->
+      <article class="conteudo-pagina">
+        <section id="conteudo-titulo">
+          <h2 class="texto-analise">
+            Análise sensorial de preparações funcionais desenvolvidas para
+            escolares entre 09 e 15 anos, do município de Campinas/SP
+          </h2>
+          <div id="interacao">
+            <div id="botoes-interacao">
+              <img src="../assets/download button.png" alt="Download" />
+              <img src="../assets/favorite button.png" alt="Favorito" />
+              <img src="../assets/doi button.png" alt="Doi" />
+            </div>
+            <p id="texto-trabalho">COMO CITAR ESSE TRABALHO</p>
+          </div>
+        </section>
+
+        <!-- Video -->
+        <section id="video-conteudo">
+          <img
+            id="video-container"
+            src="../assets/vídeo apresentação.png"
+            alt="Video"
+          />
+        </section>
+        <aside class="video-detalhe">
+          <h3 class="titulo-detalhe">Detalhes</h3>
+          <div class="conteudo-video">
+            <p class="video-texto">
+              Tipo de Apresentação: <strong>Pôster</strong><br />
+              Eixo temático: <strong>Alimentação e saúde (AS)</strong> <br />
+              Palavras-chaves:
+              <strong>Alimentos funcionais, alimentação escolar.</strong>
+              <br /><br />
+              <strong>Autores:</strong> <br />
+              Galileo Galilei¹<br />
+              Berta Lange de Morretes²<br />
+              Isaac Newton³<br />
+              Cesar Lattes¹<br />
+              Stephen Hawking⁴<br /><br />
+              <span>
+                ¹Universidade Estadual de Campinas<br />
+                ²Universidade de São Paulo<br />
+                ³Instituto Nacional de Pesquisas Espaciais<br />
+                ⁴Universidade Federal do Rio de Janeiro
+              </span>
+            </p>
+            <div class="detalhe-rolagem">
+              <div class="rolagem-cima"></div>
+              <div class="rolagem-baixo"></div>
+            </div>
+          </div>
+        </aside>
+      </article>
+
+      <section class="caixa-informativa">
+        <header class="header-informativo">Resumo</header>
+        <div class="conteudo-informativo">
+          <p class="informativo-txt__show-paragrafo" *ngIf="show">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+            vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus
+            felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce
+            auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl,
+            vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut
+            viverra lorem vestibulum ut. Phasellus condimentum orci id leo
+            condimentum lobortis et non lorem. Sed id nisl metus. Quisque
+            sollicitudin ligula in sapien scelerisque, ac gravida eros
+            vestibulum Phasellus condimentum orci id leo condimentum lobortis et
+            non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien
+            scelerisque, ac gravida eros vestibulum. Etiam aliquam dictum nisl,
+            vel aliquet enim accumsan sit ametl accumsant...
+            <button (click)="showMore()" class="btn-show-more">ver mais</button>
+          </p>
+          <p class="informativo-txt__unshow-paragrafo" *ngIf="showRestText">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+            vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus
+            felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce
+            auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl,
+            vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut
+            viverra lorem vestibulum ut. Phasellus condimentum orci id leo
+            condimentum lobortis et non lorem. Sed id nisl metus. Quisque
+            sollicitudin ligula in sapien scelerisque, ac gravida eros
+            vestibulum.
+            <br />
+            <br />
+            Fusce vitae luctus dui. Donec id euismod mauris, in volutpat urna.
+            Proin dapibus consequat feugiat. Proin dictum justo arcu, quis
+            vestibulum augue lacinia quis. Sed dignissim dui nulla, ut faucibus
+            mauris sodales id. Aliquam erat volutpat. Maecenas dolor enim,
+            tincidunt id elit non, suscipit interdum turpis. Etiam finibus urna
+            libero, eget interdum eros volutpat ullamcorper. Pellentesque et
+            pretium lorem. Aenean interdum quis diam ac porttitor. Cras nec
+            ipsum pulvinar, pharetra libero non, ornare enim. Etiam in laoreet
+            odio.
+            <br />
+            <br />
+            Nam eget tristique elit, at fermentum tellus. Mauris scelerisque
+            ligula id eleifend feugiat. Donec eleifend vehicula sem nec dapibus.
+            Integer scelerisque neque dui, in lacinia erat molestie eu.
+            Phasellus maximus dui eget lacus porta tempor. Ut ex nibh, dignissim
+            quis purus semper, efficitur facilisis turpis. Praesent blandit
+            elementum ultricies. Aliquam sit amet enim sit amet nulla pulvinar
+            lobortis consectetur non odio. Phasellus at lacus hendrerit,
+            vulputate nisi sit amet, viverra mauris. Etiam eu scelerisque orci.
+            Quisque sagittis, mi vitae pharetra iaculis, orci elit eleifend
+            massa, eu posuere mauris odio id odio. Morbi eu libero luctus,
+            consectetur lorem vel, interdum sapien. Aenean in porta arcu.
+            Maecenas eu maximus massa.
+            <br />
+            <br />
+            Praesent velit dolor, dignissim sed quam ac, efficitur porta justo.
+            Pellentesque porta pharetra felis ut hendrerit. Nulla facilisi.
+            Aliquam erat volutpat. Nunc sit amet faucibus quam. Maecenas dapibus
+            luctus dolor at viverra. Duis nec fringilla libero. Duis risus nibh,
+            viverra ac orci nec, iaculis dictum sem. Aliquam at malesuada arcu.
+            Aliquam erat volutpat. Donec varius ipsum purus, ut vehicula purus
+            placerat vitae. Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit.
+            <button (click)="showMore()" class="btn-none">ver menos</button>
+          </p>
+        </div>
+      </section>
+
+      <section class="caixa-informativa mt-[30px]">
+        <header class="header-informativo">Discussões</header>
+        <div class="conteudo-informativo">
+          <section class="discussao-compart" *ngIf="btnCreateTopic">
+            <h2 class="discussao-compart__titulo" *ngIf="!btnSubmitForm && !isSubmitted">
+              Compartilhe suas ideias ou dúvidas com os autores!
+            </h2>
+            <div class="discussao-compart__imagens" *ngIf="!btnSubmitForm && !isSubmitted">
+              <img
+                class="discussao-compart__imagens-mao"
+                src="../assets/mao.png"
+                alt="Mao"
+              />
+              <img
+                class="discussao-compart__imagens-qa"
+                src="../assets/qa.png"
+                alt="Qa"
+              />
+              <img
+                class="discussao-compart__imagens-ideia"
+                src="../assets/idea.png"
+                alt="Ideia"
+              />
+            </div>
+            <p class="discussao-compart__paragrafo" *ngIf="!btnSubmitForm && !isSubmitted">
+              Sabia que o maior estímulo no desenvolvimento científico e
+              cultural é a <br />
+              curiosidade? Deixe seus questionamentos ou sugestões para o autor!
+            </p>
+            <button
+              class="btn-create-topic"
+              (click)="toggleState()"
+              *ngIf="!btnSubmitForm && !isSubmitted"
+            >
+              + criar tópico
+            </button>
+
+            <div *ngIf="btnSubmitForm" id="header-informativo">
+              <p class="duvida">
+                Tem uma dúvida ou sugestão? Compartilhe seu feedback com os
+                autores
+              </p>
+
+              <form>
+                <h4 class="adicionar-cabecalho">Assunto</h4>
+                <input
+                  type="text"
+                  class="subject"
+                  name="subject"
+                  placeholder="Defina um tópico sucinto para notificar os autores..."
+                />
+                <h4 class="adicionar-cabecalho">Conteúdo</h4>
+                <textarea class="textArea" rows="5" cols="50"></textarea>
+                <br />
+                <div>
+                  <button
+                    class="button"
+                    (click)="submitComments()"
+                    type="submit"
+                  >
+                    Enviar
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <div *ngIf="btnResetState" id="discussion">
+              <h4 class="adicionar-cabecalho-topico">
+                Seu tópico foi enviado com sucesso! :D
+              </h4>
+              <p class="duvida">
+                Agradecemos por sua contribuição, uma notificação será enviada
+                ao seu email assim que seu tópico for respondido!
+              </p>
+              <a href="#" class="discoverLink">Descubra outros trabalhos!</a>
+              <br />
+              <button (click)="toggleStateReset()" class="btn-create-topic">
+                criar novo tópico
+              </button>
+            </div>
+            <div class="feedback-message" [hidden]="!btnResetState">
+              <div class="card-topics">
+                <h3 class="assunto-topico">Assunto da pergunta aparece aqui</h3>
+                <h4 class="usuario-topico">Carlos Henrique Santos</h4>
+                <p class="pergunta">
+                  Comecinho da pergunta aparece aqui resente relato inscreve-se
+                  no campo da análise da dimensão e impacto de processo
+                  formativo situado impacto de processo formativo processo...
+                </p>
+                <div class="shadow-card-feedback"></div>
+                <img src="../assets/esperar.png" alt="Feedback" />
+                <h3 class="h3-shadow">Aguardando feedback dos autores</h3>
+                <a class="discoverLink">Editar tópico</a>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="answered-topic-none">
+          <h3 class="assunto-topico">Assunto da pergunta aparece aqui</h3>
+          <br />
+          <p class="usuario-topico">Carlos Henrique Santos</p>
+          <br />
+          <p class="pergunta">
+            Comecinho da pergunta aparece aqui resente relato inscreve-se no
+            campo da análise da dimensão e impacto de processo formativo situado
+            impacto de processo formativo processo...
+          </p>
+          <img src="../assets/mais informações.png" alt="Mais info" />
+          <img class="coracao" src="../assets/favoritar.png" alt="Coracao" />
+          <p class="ops-topic-subject">
+            <span>1 like</span>
+            <span>1 resposta</span>
+          </p>
+        </div>
+        <div class="answered-topic">
+          <h3 class="assunto-topico">Assunto da pergunta aparece aqui</h3>
+          <br />
+          <p class="usuario-topico">Carlos Henrique Santos</p>
+          <br />
+          <p class="pergunta">
+            Comecinho da pergunta aparece aqui resente relato inscreve-se no
+            campo da análise da dimensão e impacto de processo formativo situado
+            impacto de processo formativo processo...
+          </p>
+          <img src="../assets/mais informações.png" alt="Mais info" />
+          <img class="coracao" src="../assets/favoritar.png" alt="Coracao" />
+          <p class="subject">
+            <span>4 like</span>
+            <button
+              class="ops-topic-subject"
+              (click)="toggleContainerComments()"
+            >
+              4 resposta
+            </button>
+          </p>
+        </div>
+        <div class="comments-container" *ngIf="containerComments">
+          <div class="author-1">
+            <h4>Adriano da Silva</h4>
+            <p>
+              Resposta do autor é aqui. Relato inscreve-se no campo da análise
+              da dimensão e impacto de processo formativo situado impacto de
+              processo formativo processo resente relato inscreve-se no campo da
+              análise da dimensão e impacto de processo formativo situado
+              impacto de processo formativo processo.
+            </p>
+          </div>
+          <div class="author-2">
+            <h4>Carlos Henrique Santos</h4>
+            <p>
+              Consegui entender melhor agora! Parece que a variação da análise
+              da dimensão e impacto de processo formativo situado impacto de
+              processo formativo.
+            </p>
+          </div>
+          <div class="author-1">
+            <h4>Camila Ferreira Andrade</h4>
+            <p>
+              Também ínteressante lembrar que o relato inscreve-se no campo da
+              análise da dimensão e impacto de processo formativo situado
+              impacto de<br /><br />processo formativo processo resente relato
+              inscreve-se no campo da análise da dimensão e impacto de processo
+              formativo situado impacto de processo formativo processo.
+            </p>
+          </div>
+          <div class="author-1">
+            <h4>Ana Carolina</h4>
+            <p>
+              Resposta do autor é aqui. Relato inscreve-se no campo da análise
+              da dimensão e impacto de processo formativo situado impacto de
+              processo formativo processo resente relato inscreve-se no campo da
+              análise da dimensão e impacto de processo formativo situado
+              impacto de processo formativo processo.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+      <img class="galoa" src="../assets/imagem - footer.png" alt="Galoa" />
+    </footer>
+  </div>
+
+  <!-- scripts -->
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"
+  ></script>
+</body>
 </html>
