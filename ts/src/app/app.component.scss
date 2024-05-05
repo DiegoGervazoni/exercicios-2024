@@ -23,6 +23,16 @@ $active-bg-color: #fdf1eb;
 $active-border-left: 5px solid #ed7839;
 $light-grey: #f5f5f5;
 $notification-red: #f85959;
+$cor-primaria: #ed7839;
+$cor-secundaria: #5c5c5c;
+$cor-terciaria: #4e4e4e;
+$cor-quaternaria: #ececec;
+$cor-quintenaria: #bfbfbf;
+$cor-sexta: #e7e7e7;
+$cor-setima: #827c7c;
+$cor-oitava: #fdf1eb;
+$cor-nona: #ffb354;
+$cor-decima: #ee7a3a;
 
 // Mixins
 @mixin roboto-font {
@@ -132,7 +142,7 @@ aside {
 header {
   width: 100%;
   height: 68px;
-  background-color: #fdf1eb;
+  background-color: $cor-oitava;
   display: inline-flex;
   padding-left: 0;
 }
@@ -202,7 +212,7 @@ header {
 
   #idioma {
     border: none;
-    background-color: #fdf1eb;
+    background-color: $cor-oitava;
     font-size: 14px;
   }
 }
@@ -304,7 +314,7 @@ header {
   line-height: 25px;
   margin-left: 44px;
   letter-spacing: 0.05em;
-  color: #ed7839;
+  color: $cor-primaria;
 }
 
 #interacao {
@@ -329,7 +339,7 @@ header {
   text-align: right;
   letter-spacing: 0.05em;
   word-spacing: 2px;
-  color: #ed7839;
+  color: $cor-primaria;
 }
 
 #video-conteudo {
@@ -350,14 +360,14 @@ header {
   height: 440px;
   right: 50px;
   top: 180px;
-  border: 1px solid #ececec;
+  border: 1px solid $cor-quaternaria;
   box-sizing: border-box;
   border-radius: 3px;
 }
 
 .titulo-detalhe {
-  background: #fdf1eb;
-  border: 1px solid #ececec;
+  background: $cor-oitava;
+  border: 1px solid $cor-quaternaria;
   box-sizing: border-box;
   border-radius: 3px 3px 0px 0px;
   height: 45px;
@@ -368,7 +378,7 @@ header {
   font-size: 24px;
   line-height: 25px;
   align-items: center;
-  color: #4e4e4e;
+  color: $cor-terciaria;
   padding-top: 12px;
   padding-left: 20px;
 }
@@ -387,7 +397,7 @@ header {
   font-size: 13px;
   line-height: 135%;
   letter-spacing: 0.02em;
-  color: #5c5c5c;
+  color: $cor-secundaria;
   margin-top: 15px;
   margin-left: 22px;
 }
@@ -395,7 +405,7 @@ header {
 .video-texto span {
   font-weight: 500;
   font-size: 12px;
-  color: #827c7c;
+  color: $cor-setima;
 }
 
 .detalhe-rolagem {
@@ -412,7 +422,7 @@ header {
   height: 180px;
   left: 0px;
   top: 0px;
-  background: #bfbfbf;
+  background: $cor-quintenaria;
   border-radius: 5px;
   z-index: 1;
 }
@@ -423,28 +433,28 @@ header {
   height: 306px;
   left: 0px;
   top: 0px;
-  background: #e7e7e7;
+  background: $cor-sexta;
   border-radius: 5px;
 }
 
 .caixa-informativa {
   border-radius: 3px;
-  border: 1px solid #ececec;
+  border: 1px solid $cor-quaternaria;
   margin-top: 40px;
   width: 1158px;
   margin-left: 90px;
 }
 
 .header-informativo {
-  background-color: #fdf1eb;
+  background-color: $cor-oitava;
   font-family: "Roboto";
   font-size: 20px;
   width: 1158px;
   font-weight: 500;
   line-height: 25px;
-  color: #4e4e4e;
+  color: $cor-terciaria;
   padding: 10px 15px;
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid $cor-quaternaria;
 
 }
 
@@ -458,7 +468,7 @@ header {
   font-weight: 400;
   line-height: 14.4px;
   letter-spacing: 0.02em;
-  color: #5c5c5c;
+  color: $cor-secundaria;
 }
 
 .informativo-txt__show-paragrafo, .informativo-txt__unshow-paragrafo {
@@ -467,13 +477,13 @@ header {
   font-weight: 400;
   line-height: 22.75px;
   letter-spacing: 0.02em;
-  color: #5c5c5c;
+  color: $cor-secundaria;
   margin: 0;
 }
 
 .btn-show-more {
   font-weight: 700;
-  color: #ED7839;
+  color: $cor-primaria;
   text-decoration: none;
   border: none;
   background-color: transparent; 
@@ -481,7 +491,7 @@ header {
 
 .btn-none {
   font-weight: 700;
-  color: #ED7839;
+  color: $cor-primaria;
   text-decoration: none;
   border: none;
   background-color: transparent; 
@@ -496,7 +506,7 @@ header {
 }
 
 .discussao-compart__titulo {
-  color: #ed7839;
+  color: $cor-primaria;
   font-family: Roboto;
   font-size: 18px;
   font-style: normal;
@@ -532,12 +542,12 @@ header {
   height: 32px;
   border-radius: 5px;
   border-color: transparent;
-  background: linear-gradient(180deg, #ffb354 0%, #ee7a3a 100%);
+  background: linear-gradient(180deg, $cor-nona 0%, $cor-decima 100%);
   filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.24));
 }
 
 .duvida {
-  color: #5c5c5c;
+  color: $cor-secundaria;
   text-align: center;
   font-family: Quicksand;
   font-size: 14px;
@@ -547,7 +557,7 @@ header {
 }
 
 .adicionar-cabecalho {
-  color: #ed7839;
+  color: $cor-primaria;
   font-family: Roboto;
   font-size: 16px;
   font-style: normal;
@@ -582,7 +592,7 @@ header {
 .newTopic {
   padding: 1%;
   border-radius: 3px;
-  border: 1px solid #ececec;
+  border: 1px solid $cor-quaternaria;
   line-height: normal;
   backdrop-filter: blur(10000px);
 }
@@ -599,7 +609,7 @@ header {
 .answered-topic {
   padding: 1%;
   border-radius: 3px;
-  border: 1px solid #ececec;
+  border: 1px solid $cor-quaternaria;
   line-height: normal;
   width: 1130px;
   margin: auto;
@@ -608,7 +618,7 @@ header {
 }
 
 .assunto-topico {
-  color: #ed7839;
+  color: $cor-primaria;
   font-family: Quicksand;
   font-size: 16px;
   font-style: normal;
@@ -617,7 +627,7 @@ header {
 }
 
 .usuario-topico {
-  color: #5c5c5c;
+  color: $cor-secundaria;
   font-family: Quicksand;
   font-size: 12px;
   font-style: normal;
@@ -673,7 +683,7 @@ header {
   font-family: Quicksand, sans-serif;
   font-size: 20px;
   font-weight: 700;
-  background: linear-gradient(to left, #ed7839 15%, #EAF1F2 15%);
+  background: linear-gradient(to left, $cor-primaria 15%, #EAF1F2 15%);
   text-align: right;
   padding-right: 10px;
 }
@@ -693,7 +703,7 @@ header {
 .answered-topic h3{
   margin: 0;
   font-family: 'Quicksand', sans-serif;
-  color: rgba(237, 120, 57, 1);
+  color: $cor-primaria;
   padding-left: 10px;
   padding-top: 10px;
 }
@@ -759,7 +769,7 @@ form textarea {
 }
 
 .card-topics a {
-  color: rgba(237, 120, 57, 1);
+  color: $cor-primaria;
   position: absolute;
   top: 70%;
   left: 47%;
@@ -792,6 +802,7 @@ form textarea {
   font-weight: 700;
   font-size: 12px;
   line-height: 15px;
+  margin-bottom: 10px;
 }
 
 .author-2{
@@ -811,6 +822,7 @@ form textarea {
   font-weight: 700;
   font-size: 12px;
   line-height: 15px;
+  margin-bottom: 10px;
 }
 
 footer {
