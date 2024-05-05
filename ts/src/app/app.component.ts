@@ -18,31 +18,26 @@ export class AppComponent {
   }
 
  // Logica da discussao
-  showForm: boolean = false;
-  topicSent: boolean = false;
-  topicTitle = '';
-  topicContent = '';
-  topicMessage = ''; 
-  resetState:  boolean = false; 
+  btnSubmitForm: boolean = false;
+  btnCreateTopic: boolean = true;
+  btnResetState:  boolean = false; 
+  containerComments: boolean = false;
 
-  createTopic(): void {
-    this.showForm = !this.showForm;
-    this.topicSent = !this.topicSent;
+  toggleState(): void {
+    this.btnSubmitForm = !this.btnSubmitForm;
+}
+
+  submitComments(): void {
+  this.btnSubmitForm = true;
+  this.btnResetState = true;
+}
+
+  toggleStateReset(): void {
+    this.btnResetState = !this.btnResetState;
+    this.btnSubmitForm = true;
   }
 
-  sendTopic(): void {
-    if (!this.topicTitle.trim() || !this.topicContent.trim()) {
-      alert('Por favor, preencha tanto o título quanto o conteúdo do tópico.');
-      return;
-    }
-    
-    this.topicMessage = `Título do tópico: ${this.topicTitle}\nConteúdo do tópico: ${this.topicContent}`; 
-    this.showForm = true;
-    this.topicSent = true;
-  }
-
-  createNewTopic(): void {
-    this.resetState = !this.resetState;
-    this.showForm = !this.showForm;
+  toggleContainerComments(){
+    this.containerComments = !this.containerComments;
   }
 }

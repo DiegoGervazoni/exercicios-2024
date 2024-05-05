@@ -203,11 +203,11 @@
         <section class="caixa-informativa mt-[30px]">
           <header class="header-informativo">Discussões</header>
           <div class="conteudo-informativo">
-            <section class="discussao-compart">
-              <h2 class="discussao-compart__titulo">
+            <section class="discussao-compart" *ngIf="btnCreateTopic">
+              <h2 class="discussao-compart__titulo" *ngIf="!btnSubmitForm">
                 Compartilhe suas ideias ou dúvidas com os autores!
               </h2>
-              <div class="discussao-compart__imagens">
+              <div class="discussao-compart__imagens" *ngIf="!btnSubmitForm">
                 <img
                   class="discussao-compart__imagens-mao"
                   src="../assets/mao.png"
@@ -224,67 +224,75 @@
                   alt="Ideia"
                 />
               </div>
-              <p class="discussao-compart__paragrafo">
+              <p class="discussao-compart__paragrafo" *ngIf="!btnSubmitForm">
                 Sabia que o maior estímulo no desenvolvimento científico e
-                cultural é a curiosidade? Deixe seus questionamentos ou
-                sugestões para o autor!
+                cultural é a <br />
+                curiosidade? Deixe seus questionamentos ou sugestões para o
+                autor!
               </p>
-              <button (click)="createTopic()" class="btn-create-topic">
+              <button (click)="toggleState()" class="btn-create-topic" *ngIf="!btnSubmitForm">
                 + criar tópico
               </button>
 
-              <div *ngIf="showForm" id="header-informativo">
+              <div *ngIf="btnSubmitForm" id="header-informativo">
                 <p class="duvida">
                   Tem uma dúvida ou sugestão? Compartilhe seu feedback com os
                   autores
                 </p>
 
-                <form action="">
+                <form>
                   <h4 class="adicionar-cabecalho">Assunto</h4>
                   <input
                     type="text"
-                    [(ngModel)]="topicTitle"
-                    class="inputText"
+                    class="subject"
+                    name="subject"
                     placeholder="Defina um tópico sucinto para notificar os autores..."
                   />
                   <h4 class="adicionar-cabecalho">Conteúdo</h4>
-                  <textarea
-                    [(ngModel)]="topicContent"
-                    class="textArea"
-                    rows="5"
-                    cols="50"
-                  ></textarea>
+                  <textarea class="textArea" rows="5" cols="50"></textarea>
                   <br />
-                  <button (click)="sendTopic()" class="btn-create-topic">
-                    Enviar
-                  </button>
-                </form>
-                
-                <div *ngIf="topicSent" id="discussion">
-                  <h4 class="adicionar-cabecalho">
-                    Seu tópico foi enviado com sucesso! :D
-                  </h4>
-                  <p class="duvida">
-                    Agradecemos por sua contribuição, uma notificação será
-                    enviada ao seu email assim que seu tópico for respondido!
-                  </p>
-                  <p>{{ topicMessage }}</p>
-                  <a class="discoverLink">Descubra outros trabalhos!</a>
-                  <br />
-                  <button (click)="createNewTopic()" class="btn-create-topic">
-                    novo tópico
-                  </button>
-                  <br />
-                  <div class="newTopic">
-                    <p class="waiting">Aguardando feedback dos autores</p>
-                    <a class="discoverLink">Editar tópico</a>
-                    <br />
+                  <div>
+                    <button class="btnEnviar" (click)="submitComments()" type="submit">
+                      Enviar
+                    </button>
                   </div>
+                </form>
+              </div>
+              
+              <div *ngIf="btnResetState" id="discussion">
+                <h4 class="adicionar-cabecalho">
+                  Seu tópico foi enviado com sucesso! :D
+                </h4>
+                <p class="duvida">
+                  Agradecemos por sua contribuição, uma notificação será enviada
+                  ao seu email assim que seu tópico for respondido!
+                </p>
+                <a href="#" class="discoverLink">Descubra outros trabalhos!</a>
+                <br />
+                <button (click)="toggleStateReset()" class="btn-create-topic" >
+                  criar novo tópico
+                </button>
+              </div>
+              <div class="feedback-message" *ngIf="btnResetState">
+                <div class="card-topics">
+                  <h3 class="assunto-topico">Assunto da pergunta aparece aqui</h3>
+                  <h4 class="usuario-topico">Carlos Henrique Santos</h4>
+                  <p class="pergunta">
+                    Comecinho da pergunta aparece aqui resente relato
+                    inscreve-se no campo da análise da dimensão e impacto de
+                    processo formativo situado impacto de processo formativo
+                    processo...
+                  </p>
+                  <div class="shadow-card-feedback"></div>
+                  <img src="../assets/esperar.png" alt="Feedback" />
+                  <h3 class="h3-shadow">Aguardando Feedback dos autores</h3>
+                  <a class="discoverLink">Editar tópico</a>
                 </div>
               </div>
             </section>
           </div>
-          <div class="topico">
+
+          <div class="answered-topic">
             <h3 class="assunto-topico">Assunto da pergunta aparece aqui</h3>
             <br />
             <p class="usuario-topico">Carlos Henrique Santos</p>
@@ -296,12 +304,24 @@
             </p>
             <img src="../assets/mais informações.png" alt="Mais info" />
             <img class="coracao" src="../assets/favoritar.png" alt="Coracao" />
-            <p class="interacoes">
+            <p class="ops-topic-subject">
               <span>1 like</span>
               <span>1 resposta</span>
             </p>
           </div>
-          <div class="topico">
+          <div class="comments-container" *ngIf="true">
+            <div class="author-1">
+              <h4>Adriano da Silva</h4>
+              <p class="pergunta">
+                Resposta do autor é aqui. Relato inscreve-se no campo da análise
+                da dimensão e impacto de processo formativo situado impacto de
+                processo formativo processo resente relato inscreve-se no campo
+                da análise da dimensão e impacto de processo formativo situado
+                impacto de processo formativo processo.
+              </p>
+            </div>
+          </div>
+          <div class="answered-topic">
             <h3 class="assunto-topico">Assunto da pergunta aparece aqui</h3>
             <br />
             <p class="usuario-topico">Carlos Henrique Santos</p>
@@ -313,9 +333,47 @@
             </p>
             <img src="../assets/mais informações.png" alt="Mais info" />
             <img class="coracao" src="../assets/favoritar.png" alt="Coracao" />
-            <p class="interacoes">
-              <span>1 like</span>
-              <span>1 resposta</span>
+            <p class="ops-topic-subject">
+              <span>4 like</span>
+              <span>4 resposta</span>
+            </p>
+          </div>
+          <div class="author-1">
+            <h4>Adriano da Silva</h4>
+            <p>
+              Resposta do autor é aqui. Relato inscreve-se no campo da análise
+              da dimensão e impacto de processo formativo situado impacto de
+              processo formativo processo resente relato inscreve-se no campo da
+              análise da dimensão e impacto de processo formativo situado
+              impacto de processo formativo processo.
+            </p>
+          </div>
+          <div class="author-2">
+            <h4>Carlos Henrique Santos</h4>
+            <p>
+              Consegui entender melhor agora! Parece que a variação da análise
+              da dimensão e impacto de processo formativo situado impacto de
+              processo formativo.
+            </p>
+          </div>
+          <div class="author-1">
+            <h4>Camila Ferreira Andrade</h4>
+            <p>
+              Também ínteressante lembrar que o relato inscreve-se no campo da
+              análise da dimensão e impacto de processo formativo situado
+              impacto de<br /><br />processo formativo processo resente relato
+              inscreve-se no campo da análise da dimensão e impacto de processo
+              formativo situado impacto de processo formativo processo.
+            </p>
+          </div>
+          <div class="author-1">
+            <h4>Ana Carolina</h4>
+            <p>
+              Resposta do autor é aqui. Relato inscreve-se no campo da análise
+              da dimensão e impacto de processo formativo situado impacto de
+              processo formativo processo resente relato inscreve-se no campo da
+              análise da dimensão e impacto de processo formativo situado
+              impacto de processo formativo processo.
             </p>
           </div>
         </section>
