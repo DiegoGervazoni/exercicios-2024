@@ -28,7 +28,7 @@ export class AppComponent {
 }
 
   submitComments(): void {
-  this.btnSubmitForm = true;
+  this.btnSubmitForm = false;
   this.btnResetState = true;
 }
 

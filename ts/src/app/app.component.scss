@@ -649,6 +649,18 @@ header {
   margin-left: 15px;
 }
 
+.ops-topic-subject button:not(:first-child){
+  color: #757575;
+  background: transparent;
+  font-family: Segoe UI;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 350;
+  display: inline-block;
+  border: none;
+  margin-left: 15px;
+}
+
 .coracao {
   padding: 15px;
 }
@@ -767,12 +779,38 @@ form textarea {
   background-color: #F8F8F8;
   border: #ccc solid 1px;
   font-family: Quicksand, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17.5px;
+  width: 1130px;
+  margin-left: 14px;
+  padding: 20px;
+}
+
+.author-1 h4 {
+  font-family: Quicksand, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
 }
 
 .author-2{
   background-color: #fff;
   border: #ccc solid 1px;
   font-family: Quicksand, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17.5px;
+  width: 1130px;
+  margin-left: 14px;
+  padding: 20px;
+}
+
+.author-2 h4 {
+  font-family: Quicksand, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
 }
 
 footer {
