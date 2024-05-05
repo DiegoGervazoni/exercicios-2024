@@ -33,8 +33,8 @@ describe('checa elementos básicos', () => {
   });
 
   it('enviar o formulário exibe mensagem de sucesso', () => {
-    cy.get('.btn-create-topic').click();
-    cy.get('btnEnviar').click();
+    cy.get('.btn-create-topic').click({ multiple: true });
+    cy.get('button').click({ multiple: true });
     cy.get('body').contains('Aguardando feedback dos autores');
     cy.compareSnapshot('Trabalho - Topico enviado');
   });

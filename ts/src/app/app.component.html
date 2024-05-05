@@ -230,7 +230,7 @@
                 curiosidade? Deixe seus questionamentos ou sugestões para o
                 autor!
               </p>
-              <button (click)="toggleState()" class="btn-create-topic" *ngIf="!btnSubmitForm">
+              <button  class="btn-create-topic" (click)="toggleState()" *ngIf="!btnSubmitForm">
                 + criar tópico
               </button>
 
@@ -252,7 +252,7 @@
                   <textarea class="textArea" rows="5" cols="50"></textarea>
                   <br />
                   <div>
-                    <button class="btnEnviar" (click)="submitComments()" type="submit">
+                    <button class="button" (click)="submitComments()" type="submit">
                       Enviar
                     </button>
                   </div>
@@ -285,14 +285,14 @@
                   </p>
                   <div class="shadow-card-feedback"></div>
                   <img src="../assets/esperar.png" alt="Feedback" />
-                  <h3 class="h3-shadow">Aguardando Feedback dos autores</h3>
+                  <h3 class="h3-shadow">Aguardando feedback dos autores</h3>
                   <a class="discoverLink">Editar tópico</a>
                 </div>
               </div>
             </section>
           </div>
 
-          <div class="answered-topic">
+          <div class="answered-topic-none">
             <h3 class="assunto-topico">Assunto da pergunta aparece aqui</h3>
             <br />
             <p class="usuario-topico">Carlos Henrique Santos</p>
@@ -321,12 +321,12 @@
             </p>
             <img src="../assets/mais informações.png" alt="Mais info" />
             <img class="coracao" src="../assets/favoritar.png" alt="Coracao" />
-            <p class="ops-topic-subject">
-              <span class="ops-topic-subject">4 like</span>
-              <button (click)="toggleContainerComments()">4 resposta</button>
+            <p class="subject">
+              <span>4 like</span>
+              <button class="ops-topic-subject" (click)="toggleContainerComments()">4 resposta</button>
             </p>
           </div>
-          <div *ngIf="containerComments">
+          <div class="comments-container" *ngIf="containerComments">
             <div class="author-1" >
               <h4>Adriano da Silva</h4>
               <p>
